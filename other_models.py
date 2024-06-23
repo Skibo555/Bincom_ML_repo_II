@@ -51,10 +51,3 @@ for name, metrics in results.items():
     for metric_name, value in metrics.items():
         print(f"{metric_name}: {value}")
     print("\n")
-
-# Optionally, you can also check the feature importances for tree-based models
-for name in ['Random Forest', 'Gradient Boosting']:
-    model = models[name]
-    feature_importances = pd.DataFrame({'Feature': features, 'Importance': model.feature_importances_})
-    print(f"Feature importances for {name}:\n", feature_importances)
-    print("\n")
